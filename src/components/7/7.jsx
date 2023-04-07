@@ -44,12 +44,6 @@ function Land7() {
         </div>
         <div className={styles.col}>
           <div className={styles.row}>
-            {/* <div className={styles.info}>
-              <img className={styles.check} src={check} /> Practice-oriented lessons
-            </div>
-            <div className={styles.info}>
-              <img className={styles.check} src={check} /> Study at your own pace
-            </div> */}
           </div>
           <div className={styles.row}>
             <div className={styles.info}>

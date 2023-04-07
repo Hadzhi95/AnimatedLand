@@ -16,7 +16,7 @@ function Popup({ active, setIsPopup, y }) {
             document.removeEventListener('click', checkIfClickOutside)
         }
     }, [])
-
+    
     return (
         <>
             {active && (

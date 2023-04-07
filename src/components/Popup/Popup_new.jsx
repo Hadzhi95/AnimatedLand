@@ -13,9 +13,14 @@ function Popup({ active, setIsPopup, y }) {
     const [phoneNumber, setPhoneNumber] = useState('+91');
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
+    const [checkbox, setCheckbox] = useState(false)
+
+    function hundleCheckBox () {
+        setCheckbox(true)
+    }
 
     const handleFormSubmit = (e) => {
-        if (phoneNumber.length > 10 && name.length > 2 && email.includes('@')) {
+        if (phoneNumber.length > 10 && name.length > 2 && email.includes('@')&& checkbox) {
             e.preventDefault();
             setShowModal(true);
             setTimeout(() => {
@@ -78,7 +83,7 @@ function Popup({ active, setIsPopup, y }) {
                                 <input type='submit' className={styles.btn} value="Submit" />
                             </div>
                             <div className={styles.check}>
-                                <input className={styles.checkbox} type="checkbox" />
+                                <input className={styles.checkbox} onClick={hundleCheckBox} type="checkbox" />
                                 <span className={styles.checkbox__text}>By clicking the checkbox you agree to our <a className={styles.link} onClick={() => navigate('/privacy')} >privacy policy</a> and <a className={styles.link} onClick={() => navigate('/agreement')}>training agreement</a>.</span>
                             </div>
                         </form>
